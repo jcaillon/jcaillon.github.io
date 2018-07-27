@@ -1,4 +1,4 @@
-## My repositories
+## Repo listing
 
 {% for repository in site.github.public_repositories %}
 
