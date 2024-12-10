@@ -1,7 +1,17 @@
-# Created by https://www.gitignore.io/api/jekyll
+### VS Code ###
+.vscode/**
+!.vscode/extensions.json
+!.vscode/settings.json
 
-### Jekyll ###
-_site/
-.sass-cache/
-.jekyll-cache/
-.jekyll-metadata
+### WINDOWS ###
+desktop.ini
+folder.ico
+*.bak
+
+### DOCS ###
+public/
+resources/
+.hugo_build.lock
+hugo.exe
+
+### PROJECT ###

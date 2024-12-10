@@ -1,0 +1,148 @@
+baseURL: https://jcaillon.github.io/
+languageCode: en-us
+title: Noyacode
+module:
+  hugoVersion:
+    min: "0.139.4"
+  imports:
+    - path: github.com/imfing/hextra
+
+enableRobotsTXT: true
+enableGitInfo: true
+# enableEmoji: false
+hasCJKLanguage: true
+
+outputs:
+  home: [HTML]
+  page: [HTML]
+  section: [HTML, RSS]
+
+defaultContentLanguage: en
+languages:
+  en:
+    languageName: English
+    weight: 1
+    title: Noyacode
+
+markup:
+  # allow raw html
+  goldmark:
+    renderer:
+      unsafe: true
+
+  # enable hextra syntax highlight
+  highlight:
+    noClasses: false
+
+enableInlineShortcodes: true
+
+services:
+  googleAnalytics:
+    ID: G-BM2Y6TPH1J
+
+menu:
+  main:
+    - identifier: blog
+      name: Blog
+      pageRef: /blog
+      weight: 1
+    - identifier: search
+      name: Search
+      weight: 40
+      params:
+        type: search
+    - name: GitHub ↗
+      weight: 50
+      url: "https://github.com/jcaillon"
+      params:
+        icon: github
+
+  # sidebar:
+  #   - identifier: more
+  #     name: More
+  #     params:
+  #       type: separator
+  #     weight: 10
+  #   - identifier: bashManual
+  #     name: Bash manual ↗
+  #     url: "https://www.gnu.org/software/bash/manual/bash.html"
+  #     weight: 20
+
+params:
+  description: "Noyacode website"
+
+  navbar:
+    width: wide
+    displayTitle: true
+    displayLogo: true
+    logo:
+      path: favicon.svg
+      dark: favicon-dark.svg
+      link: /
+      width: 50
+
+  footer:
+    enable: true
+    displayCopyright: true
+    displayPoweredBy: false
+    width: normal
+
+  editURL:
+    enable: true
+    base: "https://github.com/jcaillon/jcaillon.github.io/edit/main/docs/content"
+
+  page:
+    # full (100%), wide (90rem), normal (1280px)
+    width: wide
+
+  theme:
+    # light | dark | system
+    default: system
+    displayToggle: true
+
+  displayUpdatedDate: true
+  dateFormat: "January 2, 2006"
+
+  # Search
+  # flexsearch is enabled by default
+  search:
+    enable: true
+    type: flexsearch
+
+    flexsearch:
+      # index page by: content | summary | heading | title
+      index: content
+      # full | forward | reverse | strict
+      # https://github.com/nextapps-de/flexsearch/#tokenizer-prefix-search
+      tokenize: forward
+
+  blog:
+    list:
+      displayTags: true
+      # date | lastmod | publishDate | title | weight
+      sortBy: date
+      sortOrder: desc # or "asc"
+
+  highlight:
+    copy:
+      enable: true
+      # hover | always
+      display: hover
+
+  comments:
+    enable: false
+    type: giscus
+
+    # https://giscus.app/
+    giscus:
+      repo: imfing/hextra
+      repoId: R_kgDOJ9fJag
+      category: General
+      categoryId: DIC_kwDOJ9fJas4CY7gW
+      # mapping: pathname
+      # strict: 0
+      # reactionsEnabled: 1
+      # emitMetadata: 0
+      # inputPosition: top
+      # lang: en
+
